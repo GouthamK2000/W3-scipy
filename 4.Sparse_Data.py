@@ -37,3 +37,11 @@ print(csr_matrix(arr))
 #   (0, 8)	2
 
 
+
+#Case-2-count_nonzero()
+import numpy as np
+from scipy.sparse import csr_matrix
+
+arr=np.array([[3,0,0],[6,1,0],[0,0,0]])
+print(csr_matrix(arr).count_nonzero())  #count_nonzero(), retuns the number of non zero elements in the given array.
+
