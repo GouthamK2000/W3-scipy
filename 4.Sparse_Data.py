@@ -45,3 +45,10 @@ from scipy.sparse import csr_matrix
 arr=np.array([[3,0,0],[6,1,0],[0,0,0]])
 print(csr_matrix(arr).count_nonzero())  #count_nonzero(), retuns the number of non zero elements in the given array.
 
+#Case-3- printing all the digits without zeroes
+
+import numpy as np
+from scipy.sparse import csr_matrix
+
+arr= np.array([[0, 0, 0], [0, 0, 1], [1, 0, 2]])
+print(csr_matrix(arr).data) #.data ensures only the non zero elemnts are printed
