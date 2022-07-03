@@ -63,3 +63,13 @@ mat = csr_matrix(arr)
 mat.sum_duplicates()   #.sum_duplicates eliminates all the duplicates
 
 print(mat)
+
+
+#Case-5- Converting CSR to CSV method
+
+import numpy as np
+from scipy.sparse import csr_matrix
+
+arr=np.array([[0, 0, 0], [0, 0, 1], [1, 0, 2]])
+newarr=csr_matrix(arr).tocsc()    # tocsc() converts CSR to CSC 
+print(newarr)
