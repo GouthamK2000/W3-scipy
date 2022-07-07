@@ -94,3 +94,18 @@ print(floyd_warshall(newarr,return_predecessors=True))
 #        [ 2.,  3.,  0.]]), array([[-9999,     0,     0],
 #        [    1, -9999,     0],
 #        [    2,     0, -9999]], dtype=int32))
+
+#Bellman ford
+
+import numpy as np
+from scipy.sparse.csgraph import bellman_ford
+from scipy.sparse import csr_matrix
+
+arr=np.array([
+  [0, -1, 2],
+  [1, 0, 0],
+  [2, 0, 0]
+])
+
+newarr=csr_matrix(arr)
+print(bellman_ford(newarr,return_predecessors=True,indices=True))
