@@ -109,3 +109,31 @@ arr=np.array([
 
 newarr=csr_matrix(arr)
 print(bellman_ford(newarr,return_predecessors=True,indices=True))
+
+# Depth First Order
+# The depth_first_order() method returns a depth first traversal from a node.
+
+# This function takes following arguments:
+
+# the graph.
+# the starting element to traverse graph from.
+
+import numpy as np
+from scipy.sparse.csgraph import depth_first_order
+from scipy.sparse import csr_matrix
+
+arr = np.array([
+  [0, 1, 0, 1],
+  [1, 1, 1, 1],
+  [2, 1, 1, 0],
+  [0, 1, 0, 1]
+])
+
+newarr = csr_matrix(arr)
+
+print(depth_first_order(newarr, 1))
+
+#Outputs:
+# (array([1, 0, 3, 2], dtype=int32), array([    1, -9999,     1,     0], dtype=int32))
+
+
