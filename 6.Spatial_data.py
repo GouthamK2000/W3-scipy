@@ -107,4 +107,23 @@ res = euclidean(p1, p2)
 
 print(res)
 
-#Output : 9.21954445729
+#Output : 9.2195from scipy.spatial.distance import cityblock
+
+
+
+# Cityblock Distance (Manhattan Distance)
+# Is the distance computed using 4 degrees of movement.
+
+# E.g. we can only move: up, down, right, or left, not diagonally.
+
+from scipy.spatial.distance import cityblock
+
+p1 = (1, 0)
+p2 = (10, 2)
+
+res = cityblock(p1, p2)
+
+print(res)
+
+#Output : 11
+
