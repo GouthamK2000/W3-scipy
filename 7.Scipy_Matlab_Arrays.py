@@ -66,3 +66,20 @@ print(mydata['vec'])
 
 #Output: [[0 1 2 3 4 5 6 7 8 9]]
 
+
+Note: We can see that the array originally was 1D, but on extraction it has increased one dimension.
+
+In order to resolve this we can pass an additional argument squeeze_me=True:
+
+Example
+# Import:
+
+
+mydata = io.loadmat('arr.mat', squeeze_me=True)
+
+print(mydata['vec'])
+
+
+#Result:[0 1 2 3 4 5 6 7 8 9]
+
+
